@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela com Linhas Coloridas</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #000000;
+    }
+    .linha-par {
+      background-color: #9b4343;
+    }
+    .linha-impar {
+      background-color: #3f2a89;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Tabela de Exemplo</h2>
+  <table id="minhaTabela">
+    <thead>
+     <tr>
+        <th>comida</th>
+        <th>pessoa</th>
+     </tr>
+          
+    </thead>
+    <tbody>  
+        <tr>
+           <td>cuzcuz</td>
+           <td>cauã</td>
+        </tr>
+        <tr>
+           <td>feijão</td>
+           <td>miguel</td>
+        </tr>
+        <tr>
+            <td>macarronada</td>
+            <td>f.kaio</td>
+        </tr>
+        <tr>
+          <td>creme de frango</td>
+          <td>Melqui bonitão</td>      
+        </tr>
+    </tbody>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#minhaTabela tbody tr:even').addClass('linha-par');
+      $('#minhaTabela tbody tr:odd').addClass('linha-impar');
+    });
+  </script>
+
+</body>
+</html>
